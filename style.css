@@ -1,0 +1,27 @@
+/* Button hover with smooth background color transition */
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2ecc71;
+}
+
+/* Continuous sliding box animation */
+@keyframes slideRight {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(150px); }
+  100% { transform: translateX(0); }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #e74c3c;
+  animation: slideRight 3s linear infinite;
+}

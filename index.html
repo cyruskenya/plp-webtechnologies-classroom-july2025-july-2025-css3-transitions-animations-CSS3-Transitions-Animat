@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS & JavaScript Interactive Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Inline CSS for quick demo - You can move this to styles.css */
+
+    /* Part 1: CSS Transitions and Animations */
+
+    /* Button hover with smooth background color transition */
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      margin: 10px;
+    }
+
+    button:hover {
+      background-color: #2ecc71;
+    }
+
+    /* Continuous sliding box animation */
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #e74c3c;
+      margin: 20px auto;
+      animation: slideRight 3s linear infinite;
+      border-radius: 10px;
+    }
+
+    @keyframes slideRight {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(150px); }
+      100% { transform: translateX(0); }
+    }
+
+    /* Part 3: Animation triggered by JavaScript */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-50px); }
+    }
+
+    .bounce-animation {
+      animation: bounce 1s ease forwards;
+    }
+
+    /* Center content */
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>CSS & JavaScript Interactive Demo</h1>
+
+  <!-- Part 1: Button with hover effect -->
+  <section>
+    <h2>Part 1: CSS Transitions & Animations</h2>
+    <button id="hoverBtn">Hover over me!</button>
+
+    <!-- Continuous animated box -->
+    <div class="box"></div>
+  </section>
+
+  <!-- Part 3: Button triggers JS-driven animation -->
+  <section>
+    <h2>Part 3: JavaScript Triggered Animation</h2>
+    <button id="animateBtn">Animate Box</button>
+    <div id="animatedBox" class="box" style="background-color: #3498db;"></div>
+  </section>
+
+  <!-- Part 2: Console interaction for functions and scope -->
+  <section>
+    <h2>Part 2: JavaScript Functions — Check Console</h2>
+    <p>Open your browser console to see function output related to scope, parameters, and return values.</p>
+    <button id="increaseCountBtn">Increase Global Count</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
